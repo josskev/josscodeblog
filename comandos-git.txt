@@ -12,3 +12,24 @@ git push
 
 git fetch
     Nos permite traer cambios y archivo de la nube a nuestra computadora
+
+git merge [rama-a-traer]
+    Sirve traer los cambios de una rama a la rama en donde nos encontramos
+
+git log --oneline --decorate --graph
+    --oneine [Nos permite ver los commit que se han hecho de manera corta]
+    --decorate [Coloca pequeñas decoraciones ue hacen la lectura más facil]
+    --graph [Genera un pequeño grafico de lineas simulando los commit y merges que se han hecho]
+
+git tag -a [nombre-del-tag] -m ["Mensaje del tag entre comillas"] [id corto del commit al que se le quiere colocar el tag]
+    Ejemplo: git tag -a v0.1 -m "Primera versión beta" 1auys5g
+    En este caso -a nos ayuda a indicar que estamos "agregando" un tag nuevo
+
+git push origin --tags
+    Sirve para enviar a github los tags
+
+git tag -d [nombre-del-tag]
+    El -d significa "deleate" y sirve para borrar un tag de manera local
+
+git push origin :refs/tags/[nombre-del-tag-a-borrar]
+    Sirve para borrar el tag en el repositorio de Github
