@@ -8,6 +8,12 @@ body
     padding: 0;
 }
 
+#footer
+{
+    color: rgb(186, 96, 0);
+    text-align: right;
+}
+
 #cabecera
 {
     background: rgb(119, 54, 223);
