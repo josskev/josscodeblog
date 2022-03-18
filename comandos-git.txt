@@ -1,0 +1,14 @@
+git init
+    Inicializa el repositorio en la carpeta local
+
+git add [nombre-fichero]
+    Agrega al Stage el o los archivos indicados
+
+git commit -m "[mensaje de commit]
+    Realiza un commit al repositorio principal
+
+git push
+    Manda los cambios y archivos a la nube
+
+git fetch
+    Nos permite traer cambios y archivo de la nube a nuestra computadora
