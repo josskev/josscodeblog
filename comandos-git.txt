@@ -37,6 +37,9 @@ git push origin :refs/tags/[nombre-del-tag-a-borrar]
 git clone [url]
     Nos permite descargar un repositorio completo desde github
 
+git rebase [rama-destino]
+    Funciona para fusionar dos ramas, debemos colocarnos en la rama que queremos llevar a otra, por ejemplo: Nos colocamos en DEV para enviar a MAIN, al usar el comando lo que va a realizar es que agregar la rama externa a la indicada pero sin mantener le historial, es decir, nunca se vera que se creo una rama extra y parecerá que todo se hizo en la rama destino, ES UNA MALA PRÁCTICA USAR ESTE COMANDO
+
 git stash
     Nos permite agregar todos los cambios que no estan agregados al stage de git en un estado temporal para que al movernos a alguna otra rama no se pierdas dichos cambios
 
@@ -46,8 +49,12 @@ git stash pop
 git stash drop
     Nos pemrite eiminar un stash para descartar los cambios que hemos hecho.
 
+git stash branch [nombre-nueva-rama]
+    Permite crear una nueva rama con los cambios realizados sin afectar la rama actual de trabajo
+
 git clean --dry-run
     En caso de que se hayan creado archivos innecesarios o repeditos en nuestro proyecto git clean nos permite visualizarlos, al usar el comando con --dry-run nos dara una vista previa de las acciones que se van a realizar
 
 git clean -f
     La opción -f en el comando de git clean nos permite realizar los cambios previsto con git clean --dry-run y realizar el borrado de los archivos innecesarios.
+
