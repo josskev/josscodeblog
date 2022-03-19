@@ -36,3 +36,18 @@ git push origin :refs/tags/[nombre-del-tag-a-borrar]
 
 git clone [url]
     Nos permite descargar un repositorio completo desde github
+
+git stash
+    Nos permite agregar todos los cambios que no estan agregados al stage de git en un estado temporal para que al movernos a alguna otra rama no se pierdas dichos cambios
+
+git stash pop
+    Nos permite una vez creado el fichero temporal de stash poder regresar a este para ver lo que tenemos en wip (work in process)
+
+git stash drop
+    Nos pemrite eiminar un stash para descartar los cambios que hemos hecho.
+
+git clean --dry-run
+    En caso de que se hayan creado archivos innecesarios o repeditos en nuestro proyecto git clean nos permite visualizarlos, al usar el comando con --dry-run nos dara una vista previa de las acciones que se van a realizar
+
+git clean -f
+    La opción -f en el comando de git clean nos permite realizar los cambios previsto con git clean --dry-run y realizar el borrado de los archivos innecesarios.
