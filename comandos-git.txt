@@ -58,3 +58,5 @@ git clean --dry-run
 git clean -f
     La opción -f en el comando de git clean nos permite realizar los cambios previsto con git clean --dry-run y realizar el borrado de los archivos innecesarios.
 
+git commit --amend
+    Este atributi nos permite corregir algun cambio que olvidamos hacer a un commit ya realizado, el procedimiento es que una vez hecho el ultimo commit, al no haber realizado el cambio que se nos olvido, procedemos a realizar el cambio, una vez hecho eso agregamos los cambios usando [add] y posteriormente usamos git commit --amend, esto guardara los cambios olvidados dentro del mismo commit ya hecho con antlación.
