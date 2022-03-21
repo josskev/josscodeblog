@@ -25,6 +25,9 @@ git tag -a [nombre-del-tag] -m ["Mensaje del tag entre comillas"] [id corto del 
     Ejemplo: git tag -a v0.1 -m "Primera versión beta" 1auys5g
     En este caso -a nos ayuda a indicar que estamos "agregando" un tag nuevo
 
+git show-ref --tags
+    Permite visualizar los tags existentes junto con su referencia de en donde se encuentra en git.
+
 git push origin --tags
     Sirve para enviar a github los tags
 
@@ -60,3 +63,42 @@ git clean -f
 
 git commit --amend
     Este atributi nos permite corregir algun cambio que olvidamos hacer a un commit ya realizado, el procedimiento es que una vez hecho el ultimo commit, al no haber realizado el cambio que se nos olvido, procedemos a realizar el cambio, una vez hecho eso agregamos los cambios usando [add] y posteriormente usamos git commit --amend, esto guardara los cambios olvidados dentro del mismo commit ya hecho con antlación.
+
+git reflow [@HEAD o el Hash]
+    Nos permite ver TODOS Y CADA UNO  de los cambios y commits que se han realizado al proyecto aún si se ha hecho algun reset hard, en este log todos los cambios hasta las acciones de borrado de ramas, resets se ve reflejado, para visualizar el estado de ese estado se usa el comando checkout e indicamos ya sea el Head o el Hash, una vez que confirmamos cual es el commit a partir del cual queremos dejar nuestro proyecto usamos el comando RESET ya sea en hard o soft segun lo que queramos... NOTA: RESET solo debe usarse en caso de una verdadera emergencia.
+
+git grep [argumento-a-buscar]
+    Nos permite realizar una busqueda dentro de los archivos contenidos en un repositorio.
+
+        -n      | Nos coloca el número de linea dentro del archivo en donde se encuentra la coincidencia
+
+        -c      | Nos realiza un conteo de cuantas veces es usado el termino buscado dentro de cada archivo
+
+git log -S
+    Nos sirve para realizar busquedas pero dentro de los diferentes commits.
+
+git shortlog
+    Permite ver los commits que se han realizado en el proyecto, agrupandolos por persona.
+
+        -sn     | Nos muestra solamente los nombres y el número de commits realizado por persona.
+
+        -sn --all   | Muestra los nombre y el total de commits realizados por cada persona, incluyendo los commits borrados.
+
+        -sn --all --no-merges  | Muestra los nombre y el total de commits realizados por cada persona, incluyendo los commits borrados, PERO sin incluir os merge.
+
+git config --global alias.[nombre-del-alias-a-usar] "[comando-a-reemplazar]"
+    Nos permite crear un alias a algun comando en la configuración global.
+
+git blame [nombre-archivo]
+    Nos permite ver los cambios que realizo un usuario en determinado archivo.
+        -c      | Si le agregamos el atributo -c nos lo indenta por columna para que sea más legible.
+        -L númLinea,númLinea]   | nos permite ver el autor del rango de lienas indicada.
+
+git [nombre-commando] --help
+    Nos abre una pestaña en un navegador con más información sobre como usar un comando.
+
+git branch -r
+    Permite visualizar cuales branch se encuentran en el repositorio remoto
+
+git branch -a
+    Presenta los branch remotos en rojo, los locales en blanco y con un asterisco el branch en el que nos encontramos actualmente.
